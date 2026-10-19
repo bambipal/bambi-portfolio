@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bhavya Pal — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { --accent: #C9623F; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #FAF7F2; color: #211D1A; font-family: 'Work Sans', system-ui, sans-serif; line-height: 1.55; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1, h2, h3 { font-family: 'Fraunces', serif; font-weight: 500; margin: 0; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 20px clamp(24px, 6vw, 72px); background: rgba(250,247,242,0.92); backdrop-filter: blur(6px); border-bottom: 1px solid #E7E0D6; }
+  nav .brand { font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px; color: #211D1A; text-decoration: none; }
+  nav .links { display: flex; gap: clamp(14px, 3vw, 28px); font-size: 14px; font-weight: 500; }
+  nav .links a { color: #4A433C; text-decoration: none; }
+  header.hero { padding: clamp(56px, 10vw, 120px) clamp(24px, 6vw, 72px) clamp(48px, 8vw, 88px); max-width: 980px; }
+  .kicker { margin: 0 0 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  h1.title { font-size: clamp(36px, 6vw, 64px); line-height: 1.08; color: #1A1714; margin-bottom: 24px; }
+  .sub { margin: 0 0 32px; max-width: 620px; font-size: clamp(17px, 2vw, 19px); color: #4A433C; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 999px; font-size: 14px; font-weight: 500; }
+  .btn-dark { background: #1A1714; color: #FAF7F2; }
+  .btn-outline { border: 1px solid #D8CFC2; color: #1A1714; }
+  section { padding: clamp(40px, 6vw, 64px) clamp(24px, 6vw, 72px); border-top: 1px solid #E7E0D6; }
+  section h2 { font-size: 28px; margin-bottom: 28px; }
+  .about-grid { display: flex; flex-wrap: wrap; gap: clamp(32px, 6vw, 72px); }
+  .about-grid > div { flex: 1 1 380px; min-width: 0; }
+  .about-grid p { margin: 0 0 16px; color: #4A433C; max-width: 540px; }
+  .label { margin: 0 0 10px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #8A8073; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { padding: 6px 13px; background: #F0E9DD; border-radius: 999px; font-size: 13px; color: #35302A; }
+  .job { display: flex; flex-wrap: wrap; gap: 6px 24px; padding: 18px 0; border-top: 1px solid #ECE5D9; }
+  .job:first-child { border-top: none; }
+  .job .org { flex: 0 0 240px; font-weight: 600; color: #1A1714; }
+  .job .desc { flex: 1 1 420px; min-width: 0; color: #4A433C; }
+  .job .role { color: #8A8073; }
+  .cards3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .cards2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  @media (max-width: 720px) { .cards3, .cards2 { grid-template-columns: 1fr; } }
+  .card { display: block; padding: 24px; background: #F4EEE4; border-radius: 16px; color: #1A1714; }
+  .card-outline { display: block; padding: 22px 24px; border: 1px solid #E7E0D6; border-radius: 16px; color: #1A1714; }
+  .card-title { font-weight: 600; margin-bottom: 6px; }
+  .card-desc { font-size: 14px; color: #6B6257; }
+  .lede { margin: 0 0 28px; color: #6B6257; max-width: 600px; }
+  h2.sub-heading { margin: 44px 0 20px; font-size: 28px; }
+  footer { padding: 24px clamp(24px, 6vw, 72px) 40px; font-size: 13px; color: #9A907F; border-top: 1px solid #E7E0D6; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top" class="brand">Bhavya Pal</a>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#research">Research</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <p class="kicker">Design · Video · Research</p>
+  <h1 class="title">Designer, editor and researcher.</h1>
+  <p class="sub">I create social content, videos and generative AI work, and study how creators and brands grow online.</p>
+  <div class="btn-row">
+    <a class="btn btn-dark" href="mailto:bhavyapal74@gmail.com">Get in touch</a>
+    <a class="btn btn-outline" href="https://www.linkedin.com/in/bhavya-pal-65338028b" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<section id="about">
+  <div class="about-grid">
+    <div>
+      <h2>About</h2>
+      <p>I'm studying Economics at the University of Delhi. I started in visual branding, moved into editorial and research work, and now work as a creative and editorial intern at Zupee's Founder's Office — on content, creator research and generative AI.</p>
+      <p>I like work that is clear, friendly and well researched.</p>
+    </div>
+    <div>
+      <div style="margin-bottom:24px;">
+        <h3 class="label">Skills</h3>
+        <div class="chips">
+          <span class="chip">Social media design</span>
+          <span class="chip">Campaign &amp; event creatives</span>
+          <span class="chip">Branding</span>
+          <span class="chip">Editorial writing</span>
+          <span class="chip">Digital storytelling</span>
+          <span class="chip">Survey research</span>
+          <span class="chip">Industry analysis</span>
+          <span class="chip">Public speaking</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="label">Tools</h3>
+        <div class="chips">
+          <span class="chip">Canva</span>
+          <span class="chip">OpenArt</span>
+          <span class="chip">Google Flow</span>
+          <span class="chip">Grok AI</span>
+          <span class="chip">Runway</span>
+          <span class="chip">Claude</span>
+          <span class="chip">ChatGPT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="job">
+    <div class="org">Zupee, Founder's Office</div>
+    <div class="desc"><span class="role">Creative &amp; editorial intern.</span> Revamped the Broadcast Feed, lifting engagement 22%. Tracked 40+ generative AI tools and benchmarked 25+ AI influencer accounts.</div>
+  </div>
+  <div class="job">
+    <div class="org">TERI</div>
+    <div class="desc"><span class="role">Intern.</span> Ran surveys with 150+ people across 4 field locations; wrote 3 sections of the final report.</div>
+  </div>
+  <div class="job">
+    <div class="org">FEMEV</div>
+    <div class="desc"><span class="role">Media &amp; outreach intern.</span> Led 12 awareness drives reaching 800+ people; made 40+ pieces of social content.</div>
+  </div>
+  <div class="job">
+    <div class="org">Optima, Entrepreneurship Cell</div>
+    <div class="desc"><span class="role">Head of Design.</span> Led 8 designers; delivered 50+ creatives, 6 newsletters and the annual magazine.</div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Work</h2>
+  <div class="cards3">
+    <a class="card" href="https://www.canva.com/design/DAGdwQjmGec/0uXAZzAGEQRe1c-ai5wpLw/view" target="_blank" rel="noopener">
+      <div class="card-title">Design portfolio ↗</div>
+      <div class="card-desc">Posters, social creatives, newsletters and campaign work.</div>
+    </a>
+    <a class="card" href="https://drive.google.com/drive/folders/1HTra9ELK7dYLyIyPwZv3mQe169zF0ymH?usp=share_link" target="_blank" rel="noopener">
+      <div class="card-title">Video edits ↗</div>
+      <div class="card-desc">Videos shot and edited myself.</div>
+    </a>
+    <a class="card" href="https://drive.google.com/drive/folders/11MctS0CVJyle_UzWJZasAowDd15sT5R8?usp=share_link" target="_blank" rel="noopener">
+      <div class="card-title">Generative AI ↗</div>
+      <div class="card-desc">Images and videos made with AI tools.</div>
+    </a>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <p class="lede">A four-part study on how Indian creators grow, who follows them and how they earn.</p>
+  <div class="cards2">
+    <a class="card-outline" href="./01_AI_Influencer_Research%20(1).pdf" target="_blank" rel="noopener">
+      <div class="card-title">AI influencer research ↗</div>
+      <div class="card-desc">What makes Indian creators succeed, and a plan for an AI-led influencer.</div>
+    </a>
+    <a class="card-outline" href="./02_Creator_Archetype_Analysis%20(1).pdf" target="_blank" rel="noopener">
+      <div class="card-title">Creator archetype analysis ↗</div>
+      <div class="card-desc">Brand archetypes across India's top Instagram creators.</div>
+    </a>
+    <a class="card-outline" href="./03_Emma_Chamberlain_Case_Study%20(1).pdf" target="_blank" rel="noopener">
+      <div class="card-title">Emma Chamberlain case study ↗</div>
+      <div class="card-desc">Parasocial relationships and radical authenticity.</div>
+    </a>
+    <a class="card-outline" href="./04_Creator_Earnings_Matrix%20(1).pdf" target="_blank" rel="noopener">
+      <div class="card-title">Creator earnings matrix ↗</div>
+      <div class="card-desc">How 50+ Indian creators earn on Instagram.</div>
+    </a>
+  </div>
+
+  <h2 class="sub-heading">Pitch decks</h2>
+  <div class="cards2">
+    <a class="card-outline" href="./UA_ad_pitch_deck_for_pronto.pdf" target="_blank" rel="noopener">
+      <div class="card-title">Pronto user acquisition ads ↗</div>
+      <div class="card-desc">Competitor ad analysis and new ad concepts.</div>
+    </a>
+    <a class="card-outline" href="./ixigo_tara_strategy%20(3).pptx" target="_blank" rel="noopener">
+      <div class="card-title">ixigo x Tara ↗</div>
+      <div class="card-desc">Instagram audit, gaps and an AI agent plan.</div>
+    </a>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let's talk.</h2>
+  <div class="btn-row">
+    <a class="btn btn-dark" href="mailto:bhavyapal74@gmail.com">bhavyapal74@gmail.com</a>
+    <a class="btn btn-outline" href="https://www.linkedin.com/in/bhavya-pal-65338028b" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn btn-outline" href="./files/Bhavya_Pal_Resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+  </div>
+</section>
+
+<footer>© 2026 Bhavya Pal</footer>
+
+</body>
+</html>
